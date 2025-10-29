@@ -1,5 +1,3 @@
-# GitHub Actions workflow for building Android APK
-# Updated: 2025-10-29
 name: Build Android APK
 
 on:
@@ -36,7 +34,7 @@ jobs:
         buildozer android debug
 
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: android-apk
         path: bin/*.apk
